@@ -12,6 +12,7 @@
   margin-bottom: 15px;
   padding: 20px;
   font-family: 'colaboratelightregular', sans-serif;
+  opacity: 0.75;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,14 +21,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background-image: image_url('memphis-mini.png');
+  background-image: image_url('topography.png');
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: relative;
   padding-bottom: 100px;
 }
 
 .navbar {
-  background-image: image_url('triangular.png');
+  background-image: image_url('green_dust_scratch.png');
   box-shadow: 0px 1px 13px #a1e3ff;
 }
 
