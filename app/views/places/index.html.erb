@@ -6,6 +6,17 @@
   <% if place.user.present? %>
     <small><%= place.user.email%></small>
   <% end %>
+
+
+<% if place.comments.present? %>
+  <div class = "col-12">
+    <blockquote>
+      <% if place.comments.last.humanized_rating.present? %>
+        <b><%= place.comments.last.humanized_rating %></b> -
+      <% end %>
+      <b><%= place.comments.last.message %> </b>
+      <small><%= place.comments.last.user.email %> </small>
+    </blockquote>
 </div>
 <% end %>
 
@@ -13,3 +24,5 @@
   <%= will_paginate @places, previous_label: '<<', next_label: '>>',
   link_separator: ' - ', :container => false %>
 </div>
+</div>
+<% end %>
