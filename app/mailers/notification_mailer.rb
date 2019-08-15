@@ -6,5 +6,6 @@ class NotificationMailer < ApplicationMailer
     @place_owner = @place.user
     mail(to: @place_owner.email,
           subject: "A comment has been added to #{@place.name}!")
+    puts "Gmail Address:  #{ENV['GMAIL_ADDRESS']} "
   end
 end
