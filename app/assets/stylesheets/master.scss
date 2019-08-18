@@ -36,6 +36,7 @@ body {
 .navbar-inverse .navbar-brand {
     font-family: 'Monoton', cursive;
     font-size: 26px;
+    margin-bottom: 0;
 }
 
 .pager {
@@ -86,4 +87,28 @@ blockquote p {
 .thumb {
   height: 100px;
   width: 150px;
+}
+.carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
+  max-height: 550px;
+  width: 100%;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  display: block;
+}
+.carousel-caption {
+  font-family: 'colaboratelightregular', sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  text-shadow: rgba(0, 0, 0, 0.95) 2px 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.carousel {
+  box-shadow: 0px 1px 13px #a1e3ff;
 }
