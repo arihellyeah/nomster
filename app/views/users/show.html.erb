@@ -12,8 +12,9 @@
   </div>
   <div class="clear"></div>
 </div>
-
+<br>
 <h1 class="text-center">My Comments</h1>
+<br>
 <div class="row">
   <% @user.comments.each do |comment| %>
   <div class = "col-12 col-sm-6">
@@ -28,3 +29,40 @@
   </div>
   <% end %>
 </div>
+<div class="clear"></div>
+<br>
+<h1 class="text-center">My Places</h1>
+<br>
+<% @user.places.each do |place| %>
+  <div class="booyah-box col-10 offset-1">
+      <% if place.photo.last.present? %>
+        <%= image_tag place.photo.last.picture.url, class: 'thumb' %>
+      <% end %>
+      <br>
+      <br>
+      <h1><%= link_to place.name, place_path(place) %></h1>
+      <i><%= place.address %></i> <br> <br>
+      <p><%= place.description %></p> <br>
+      <% if current_user && current_user == place.user %>
+        <small>You posted this!</small>
+      <% elsif place.user.present? %>
+        <small><%= place.user.email%></small>
+      <% end %>
+
+  <% if place.comments.present? %>
+    <div class = "col-12">
+      <blockquote>
+        <% if place.comments.last.humanized_rating.present? %>
+          <b><%= place.comments.last.humanized_rating %></b> -
+        <% end %>
+        <b><%= place.comments.last.message %> </b>
+        <% if current_user && current_user == place.comments.last.user %>
+          <small>- from you</small>
+          <% elsif place.comments.last.user.present? %>
+            <small> - <%= place.comments.last.user.email%></small>
+          <% end %>
+      </blockquote>
+    </div>
+<% end %>
+</div>
+<% end %>
