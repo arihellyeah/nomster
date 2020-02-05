@@ -49,15 +49,6 @@ Now run the application:
 $ rails s
 ```
 
-## Running the tests
-
-This application's tests are through [rspec](https://github.com/rspec/rspec-rails).
-To run the tests please run the following command:
-
-```
-$ bundle exec rspec
-```
-
 ## Deployment
 
 If you'd like to deploy this application, I recommend doing so through Heroku.
